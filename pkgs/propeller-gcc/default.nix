@@ -17,6 +17,7 @@ let
   patches = [
     ./gcc-cfns.patch
     ./gcc-docs.patch
+    ./spinsim-format.patch
   ];
 
 #  prePatch = ''
