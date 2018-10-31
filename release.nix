@@ -1,1 +1,1 @@
-import <nixpkgs> { overlays = [ (import ./default.nix) ]; }; { inherit openspin propeller-gcc; }
+import <nixpkgs> { overlays = [ (import ./default.nix) ]; } { inherit openspin propeller-gcc; }
