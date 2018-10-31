@@ -2,8 +2,6 @@
 
 let
   version = "2018-04-14";
-
-
   srcs = import ./srcs.nix { inherit fetchgit; inherit fetchurl; };
 
   in stdenv.mkDerivation rec {
@@ -11,6 +9,7 @@ let
   CFLAGS="-Wno-implicit-fallthrough -Wno-format-security";
 
   buildInputs = [ texinfo wget texinfo bison flex expat ];
+  installFlags = [ "INSTALL=$(out)" ];
 
   src = srcs.pgcc;
 
